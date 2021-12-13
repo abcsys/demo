@@ -1,0 +1,10 @@
+apiVersion: mock.digi.dev/v1
+kind: lamp_geeni
+metadata:
+  name: lamp_geeni-test
+spec:
+  control:
+    brightness: -1
+    power: -1
+  meta:
+    load_interval: -1

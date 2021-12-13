@@ -1,0 +1,15 @@
+apiVersion: mock.digi.dev/v1
+kind: lamp-phue
+metadata:
+  name: {{ .Values.name }}
+spec:
+  control:
+    brightness:
+      intent: 0.8
+    power:
+      intent: "off"
+    color:
+      intent: "yellow"
+  meta:
+    vendor: phue
+    load_interval: 1

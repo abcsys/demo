@@ -1,0 +1,8 @@
+group: mock.digi.dev
+image: silveryfu/lamp-geeni.v1.mock.digi.dev:latest
+imagepull: Always
+mounter: false
+name: lamp-geeni
+namespace: default
+plural: lamp-geenis
+version: v1

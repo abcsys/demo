@@ -1,0 +1,13 @@
+apiVersion: mock.digi.dev/v1
+kind: lamp-geeni
+metadata:
+  name: {{ .Values.name }}
+spec:
+  control:
+    brightness:
+      intent: 0.6
+    power:
+      intent: "off"
+  meta:
+    vendor: geeni
+    load_interval: 1

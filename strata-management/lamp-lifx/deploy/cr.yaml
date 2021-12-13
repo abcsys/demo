@@ -1,0 +1,17 @@
+apiVersion: mock.digi.dev/v1
+kind: lamp-lifx
+metadata:
+  name: {{ .Values.name }}
+spec:
+  control:
+    brightness:
+      intent: 0.2
+    power:
+      intent: "on"
+    infrared_brightness:
+      intent: 0.4
+    waveform:
+      intent: "SINE"
+  meta:
+    vendor: lifx
+    load_interval: 1

@@ -1,0 +1,10 @@
+group: mock.digi.dev
+version: v1
+kind: lamp-phue
+control:
+  power: string
+  brightness: number
+  color: string
+meta:
+  vendor: string
+  load_interval: number

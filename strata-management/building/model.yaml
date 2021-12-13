@@ -1,0 +1,9 @@
+group: mock.digi.dev
+version: v1
+kind: building
+control:
+  mode: string
+mount:
+  mock.digi.dev/v1/lamp-geenis: object
+  mock.digi.dev/v1/lamp-lifxes: object
+  mock.digi.dev/v1/lamp-phues: object

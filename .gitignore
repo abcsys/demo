@@ -235,16 +235,14 @@ BenchmarkDotNet.Artifacts/
 .idea/
 *.pyc
 .DS_Store
-/cmd/digi/dq
-
-# examples
-examples/kome
-
-driver/handler.py
-
-# benchmarks
-benchmarks/digis/gen.py
-benchmarks/digis/Makefile
-benchmarks/digis/patch.py
 
 /demo
+
+# data files
+*.zng
+*.zst
+*.zson
+*.ndjson
+*.json
+*.parquet
+*.csv

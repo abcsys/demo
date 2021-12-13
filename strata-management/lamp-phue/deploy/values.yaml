@@ -1,0 +1,8 @@
+group: mock.digi.dev
+image: silveryfu/lamp-phue.v1.mock.digi.dev:latest
+imagepull: Always
+mounter: false
+name: lamp-phue
+namespace: default
+plural: lamp-phues
+version: v1

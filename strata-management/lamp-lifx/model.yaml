@@ -1,0 +1,11 @@
+group: mock.digi.dev
+version: v1
+kind: lamp-lifx
+control:
+  power: string
+  brightness: number
+  infrared_brightness: number
+  waveform: string
+meta:
+  vendor: string
+  load_interval: number

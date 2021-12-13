@@ -1,0 +1,11 @@
+apiVersion: mock.digi.dev/v1
+kind: lamp_phue
+metadata:
+  name: lamp_phue-test
+spec:
+  control:
+    brightness: -1
+    color: -1
+    power: -1
+  meta:
+    load_interval: -1

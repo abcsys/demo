@@ -1,0 +1,12 @@
+apiVersion: mock.digi.dev/v1
+kind: lamp_lifx
+metadata:
+  name: lamp_lifx-test
+spec:
+  control:
+    brightness: -1
+    infrared_brightness: -1
+    power: -1
+    waveform: -1
+  meta:
+    load_interval: -1

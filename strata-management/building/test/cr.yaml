@@ -1,0 +1,11 @@
+apiVersion: mock.digi.dev/v1
+kind: building
+metadata:
+  name: building-test
+spec:
+  control:
+    mode: -1
+  mount:
+    mock.digi.dev/v1/lamp_geeni: -1
+    mock.digi.dev/v1/lamp_lifx: -1
+    mock.digi.dev/v1/lamp_phue: -1

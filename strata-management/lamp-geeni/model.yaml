@@ -1,0 +1,9 @@
+group: mock.digi.dev
+version: v1
+kind: lamp-geeni
+control:
+  power: string
+  brightness: number
+meta:
+  vendor: string
+  load_interval: number
