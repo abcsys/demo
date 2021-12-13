@@ -1,0 +1,7 @@
+group: smarthome.mock.digi.dev
+version: v1
+kind: Human
+control:
+  cur_time: number
+mount:
+  smarthome.mock.digi.dev/v1/rooms: object

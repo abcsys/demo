@@ -1,0 +1,10 @@
+apiVersion: smarthome.mock.digi.dev/v1
+kind: Lamp
+metadata:
+  name: {{ .Values.name }}
+spec:
+  control:
+    brightness:
+      intent: 0
+  meta:
+    load_interval: -1

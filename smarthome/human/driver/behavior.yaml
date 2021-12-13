@@ -1,0 +1,61 @@
+livingroom:
+  activity:
+    sleep:
+      brightness: 0.1
+      p: 0.1
+    watch-tv:
+      brightness: 0.5
+      p: 0.2
+    work:
+      brightness: 1.0
+      p: 0.7
+  transition:
+    morning:
+      bedroom:
+        p: 0.2
+      stay:
+        p: 0.8
+    afternoon:
+      bedroom:
+        p: 0.2
+      stay:
+        p: 0.8
+    evening:
+      bedroom:
+        p: 0.5
+      stay:
+        p: 0.5
+    night:
+      bedroom:
+        p: 0.9
+      stay:
+        p: 0.1
+bedroom:
+  activity:
+    read:
+      brightness: 0.6
+      p: 0.2
+    sleep:
+      brightness: 0.0
+      p: 0.8
+  transition:
+    morning:
+      livingroom:
+        p: 0.9
+      stay:
+        p: 0.1
+    afternoon:
+      livingroom:
+        p: 0.9
+      stay:
+        p: 0.1
+    evening:
+      livingroom:
+        p: 0.2
+      stay:
+        p: 0.8
+    night:
+      livingroom:
+        p: 0.0
+      stay:
+        p: 1

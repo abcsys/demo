@@ -1,0 +1,24 @@
+group: smarthome.mock.digi.dev
+version: v1
+kind: Room
+meta:
+  load_interval: number
+control:
+  brightness: number
+obs:
+  human_presence: boolean
+  objects:
+    openapi:
+      items:
+        properties:
+          class:
+            type: string
+          name:
+            type: string
+          activity:
+            type: string
+        type: object
+      type: array
+reflex: object
+mount:
+  smarthome.mock.digi.dev/v1/lamps: object

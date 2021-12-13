@@ -1,0 +1,9 @@
+group: smarthome.mock.digi.dev
+image: silveryfu/home.v1.smarthome.mock.digi.dev:latest
+imagepull: Always
+mounter: true
+name: home
+namespace: default
+plural: homes
+pool_provider: zed
+version: v1

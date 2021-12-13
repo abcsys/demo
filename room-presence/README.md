@@ -2,6 +2,18 @@ Digi is an open source framework for building lightweight digital twins ("digi")
 
 Digis can run in any infrastructure where Kubernetes runs. They also inherit the nice properties of Kubernetes.
 
+In this demo, we will walk through:
+
+Build a simple Lamp digi
+* Build digi 
+* Run and configure digi
+* Program digi driver
+
+Configure a room that reacts to human presence + analytics
+* Compose digis (aggregate room brightness, adapting brightness to human presence)
+* What is the average brightness of the lamp? The room?
+* TBD lamp count in room
+* Who consume the most lamp-time?
 
 ### Lamp
 
@@ -72,6 +84,10 @@ digi watch lake
 ```
 
 
+```
+digi query r1 "select brightness,human | this := crop({brightness:float32,human:[string]}) | explode this by type({brightness:float32,human:string})"
+```
+
 
 
 
@@ -91,3 +107,6 @@ digi watch printer
 digi edit printer          # edit power
 ```
 
+Seeking feedback:
+* Use cases
+* Better demo

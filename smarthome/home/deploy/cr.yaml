@@ -1,0 +1,4 @@
+apiVersion: smarthome.mock.digi.dev/v1
+kind: Home
+metadata:
+  name: {{ .Values.name }}

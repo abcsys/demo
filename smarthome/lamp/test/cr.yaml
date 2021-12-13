@@ -1,0 +1,7 @@
+apiVersion: smarthome.mock.digi.dev/v1
+kind: lamp
+metadata:
+  name: lamp-test
+spec:
+  control:
+    brightness: 0.2

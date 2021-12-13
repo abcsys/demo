@@ -1,0 +1,9 @@
+group: smarthome.mock.digi.dev
+image: silveryfu/lamp.v1.smarthome.mock.digi.dev:latest
+imagepull: Always
+mounter: false
+name: lamp
+namespace: default
+plural: lamps
+pool_provider: zed
+version: v1

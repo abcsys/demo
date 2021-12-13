@@ -1,0 +1,27 @@
+group: smarthome.mock.digi.dev
+version: v1
+kind: Home
+control:
+  mode: string
+obs:
+  rooms:
+    openapi:
+      additionalProperties:
+        properties:
+          objects:
+            items:
+              properties:
+                class:
+                  type: string
+                name:
+                  type: string
+                activity:
+                  type: string
+              type: object
+            type: array
+          brightness:
+            type: number
+        type: object
+      type: object
+mount:
+  smarthome.mock.digi.dev/v1/rooms: object
