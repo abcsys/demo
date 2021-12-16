@@ -5,4 +5,9 @@ metadata:
 spec:
   control:
     cur_time:
-      intent: 0
+      intent: -1
+    cur_gen:
+      intent: -1
+#  meta:
+#    initial_room: "bedroom"
+#    seed: 42

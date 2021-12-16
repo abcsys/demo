@@ -8,7 +8,8 @@ import numpy as np
 import yaml
 
 """
-Update the room model directly, without going through the mounter.
+Update the rooms via the mounter. The update might be dropped if
+the room driver updates the .status.
 """
 
 gvr_room = "smarthome.mock.digi.dev/v1/rooms"
@@ -24,7 +25,6 @@ class Human:
         self.name = name
         self.cur_gen = 0
         self.cur_time = 0
-        self.stayed = False
         # TBD load initial room from model
         self.cur_room = "bedroom"
         self.cur_activity = "sleep"
@@ -49,7 +49,6 @@ class Human:
         self.cur_room = "bedroom"
         self.cur_activity = "sleep"
         self.last_room = None
-        self.stayed = False
 
     def phase_of_day(self):
         ratio = self.cur_time / self.max_time
@@ -86,23 +85,18 @@ class Human:
         if next_room != "stay":
             self.last_room = self.cur_room
             self.cur_room = next_room
-            self.stayed = False
-        else:
-            self.stayed = True
 
         self.cur_activity = self._activity(self.cur_room)
         self.cur_time = (self.cur_time + 1) % self.max_time
         self.log()
 
     def update_room(self, rooms):
-        patches = list()
         # iterate over rooms
-        for room_nsn, model in rooms.items():
-            room_name = util.simple_name(room_nsn)
+        for room_name, model in rooms.items():
+            room_name = util.simple_name(room_name)
 
             # update human presence
-            patch = dict()
-            util.update(patch, "spec.obs.human_presence",
+            util.update(model, "spec.obs.human_presence",
                         room_name == self.cur_room, create=True)
 
             # update room obs.objects
@@ -120,60 +114,42 @@ class Human:
                     "name": self.name,
                     "activity": self.cur_activity
                 })
-            util.update(patch,
+            util.update(model,
                         "spec.obs.objects",
                         new_room_objects,
                         create=True)
 
-            room_brightness = util.get(model,
-                                       "spec.control.brightness.status",
-                                       -1)
+            room_brightness = util.get(model, "spec.control.brightness.status", -1)
 
             # update brightness of current room
             if room_name == self.cur_room:
                 desired_brightness = util.get(self.behavior_config,
-                                              f"{room_name}.activity."
-                                              f"{self.cur_activity}"
-                                              f".brightness")
+                                      f"{room_name}.activity."
+                                      f"{self.cur_activity}"
+                                      f".brightness")
                 min_val = float(desired_brightness.get("min", 0.0))
                 max_val = float(desired_brightness.get("max", 1.0))
 
                 # if the room's brightness already fit the range,
                 # don't update the brightness, otherwise set the
-                # brightness to the mean
+                # brightness to the average
                 if not (min_val < room_brightness < max_val):
                     mean_brightness = np.mean([min_val, max_val])
-                    mean_brightness = round(float(mean_brightness), 1)
 
                     # update children directly
-                    util.update(patch,
+                    util.update(model,
                                 "spec.control.brightness.intent",
                                 mean_brightness,
                                 create=True)
             # if no one is in the room, turn off the lamps
             # to save energy except for the last room stayed,
             # to give an opportunity for automation
-            elif room_name != self.last_room or self.stayed:
+            elif room_name != self.last_room:
                 # TBD: allow a low range to see any emergent behavior
-                util.update(patch,
+                util.update(model,
                             "spec.control.brightness.intent",
                             0.0,
                             create=True)
-
-            # prepare the patch
-            g, v, r = util.parse_gvr(gvr_room)
-            n, ns = util.parse_spaced_name(room_nsn)
-            patch = ((g, v, r, n, ns), patch.get("spec", {}))
-
-            # ensure the last room gets patched first
-            # to mimic the leaving room
-            if room_name == self.last_room:
-                patches.insert(0, patch)
-            else:
-                patches.append(patch)
-
-        for duri, patch in patches:
-            util.patch_spec(*duri, patch)
 
     def log(self):
         digi.pool.load([

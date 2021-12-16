@@ -25,6 +25,13 @@ spec:
             properties:
               control:
                 properties:
+                  cur_gen:
+                    properties:
+                      intent:
+                        type: number
+                      status:
+                        type: number
+                    type: object
                   cur_time:
                     properties:
                       intent:
