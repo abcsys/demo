@@ -135,12 +135,13 @@ class Env(gym.Env):
         pass
 
     def step(self, action):
-        action = self.action_mapping[action]
-        # print("ACTION:", action)
+        if action is not None:
+            action = self.action_mapping[action]
+            # print("ACTION:", action)
 
-        # apply brightness
-        for i, a in enumerate(action):
-            self.state[i + 1] = a
+            # apply brightness
+            for i, a in enumerate(action):
+                self.state[i + 1] = a
 
         phase = self.decode_phase[self.state[0]]
         brightness_state = self.state[1:self.num_room + 1]
@@ -184,7 +185,7 @@ class Env(gym.Env):
         # last room, if different from the current room,
         # remains unchanged to give a chance for the agent
         next_brightness_state[room_index] = last_brightness_state[room_index]
-        if not (_min <= self.decode_brightness_level[brightness_state[next_room_index]] <= _max):
+        if not (_min <= self.decode_brightness_level[last_brightness_state[next_room_index]] <= _max):
             next_brightness_state[next_room_index] = self.encode_brightness_level[np.round((_min + _max) / 2, 1)]
 
         next_activity_state = [0 for _ in range(self.num_room)]
@@ -199,8 +200,9 @@ class Env(gym.Env):
 
         self.total_effort += -cost
         self.actions.append((self.cur_time, self.total_effort, action, self.last_state, self.state))
-        if self.cur_time > 47 and self.total_effort > -40:
-            print(self.actions)
+        # if self.cur_time > 47 and self.total_effort > -40:
+        #     print(self.actions)
+        print(last_brightness_state, next_brightness_state, cost)
         return np.array(self.state), -cost, self.cur_time == self.max_episode_steps, None
 
     def close(self):
@@ -298,7 +300,8 @@ def main():
     # model.eval()
 
     for _ in range(env.max_episode_steps):
-        ob, rew, done, _ = env.step(np.product([0, 0, 0]))
+        # ob, rew, done, _ = env.step(np.product([0, 9, 9]))
+        ob, rew, done, _ = env.step(None)
         rewards.append(rew)
     print("Total reward:", sum(rewards))
 

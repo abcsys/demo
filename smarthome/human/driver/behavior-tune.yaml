@@ -18,32 +18,32 @@ livingroom:
   transition:
     morning:
       kitchen:
-        p: 0.2
+        p: 0.02
       bedroom:
-        p: 0.1
+        p: 0.02
       stay:
-        p: 0.7
+        p: 0.96
     afternoon:
       kitchen:
-        p: 0.1
+        p: 0.5
       bedroom:
-        p: 0.2
+        p: 0.4
       stay:
-        p: 0.7
+        p: 0.1
     evening:
       kitchen:
-        p: 0.3
+        p: 0.0
       bedroom:
-        p: 0.2
+        p: 1.0
       stay:
-        p: 0.5
+        p: 0.0
     night:
       kitchen:
-        p: 0.1
+        p: 0.2
       bedroom:
         p: 0.8
       stay:
-        p: 0.1
+        p: 0.0
 bedroom:
   activity:
     read:

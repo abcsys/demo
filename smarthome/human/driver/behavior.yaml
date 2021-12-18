@@ -8,7 +8,7 @@ livingroom:
     watch-tv:
       brightness:
         min: 0.2
-        max: 0.8
+        max: 0.6
       p: 0.2
     work:
       brightness:
@@ -18,32 +18,32 @@ livingroom:
   transition:
     morning:
       kitchen:
-        p: 0.02
+        p: 0.2
       bedroom:
-        p: 0.02
+        p: 0.1
       stay:
-        p: 0.96
+        p: 0.7
     afternoon:
       kitchen:
-        p: 0.5
-      bedroom:
-        p: 0.4
-      stay:
         p: 0.1
+      bedroom:
+        p: 0.2
+      stay:
+        p: 0.7
     evening:
       kitchen:
-        p: 0.0
+        p: 0.3
       bedroom:
-        p: 1.0
+        p: 0.2
       stay:
-        p: 0.0
+        p: 0.5
     night:
       kitchen:
-        p: 0.2
+        p: 0.1
       bedroom:
         p: 0.8
       stay:
-        p: 0.0
+        p: 0.1
 bedroom:
   activity:
     read:
@@ -89,7 +89,7 @@ kitchen:
   activity:
     cook:
       brightness:
-        min: 0.6
+        min: 0.4
         max: 1.0
       p: 0.8
     wash:
