@@ -74,9 +74,9 @@ class Human:
     def _activity(self, src):
         """Return the activity."""
         actvs, probs = list(), list()
-        for dest, config in self.behavior_config[src] \
+        for name, config in self.behavior_config[src] \
                 ["activity"].items():
-            actvs.append(dest)
+            actvs.append(name)
             probs.append(config["p"])
         return np.random.choice(actvs, 1, p=probs)[0]
 
