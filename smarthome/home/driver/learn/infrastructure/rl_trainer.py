@@ -59,9 +59,8 @@ class RL_Trainer(object):
         MAX_VIDEO_LEN = self.params['ep_len']
 
         # Is this env continuous, or self.discrete?
-        # TBD
-        # discrete = isinstance(self.env.action_space, gym.spaces.Discrete)
-        discrete = True
+        discrete = isinstance(self.env.action_space, gym.spaces.Discrete)
+        # discrete = True
         # Are the observations images?
         img = len(self.env.observation_space.shape) > 2
 
@@ -70,7 +69,9 @@ class RL_Trainer(object):
         # Observation and action sizes
 
         ob_dim = self.env.observation_space.shape if img else self.env.observation_space.shape[0]
+        # ob_dim = self.env.observation_space.n
         ac_dim = self.env.action_space.n if discrete else self.env.action_space.shape[0]
+        # ac_dim = self.env.action_space.shape[0]
         self.params['agent_params']['ac_dim'] = ac_dim
         self.params['agent_params']['ob_dim'] = ob_dim
 

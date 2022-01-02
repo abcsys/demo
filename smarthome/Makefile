@@ -22,6 +22,6 @@ test:
 	ds mount livingroom home-test
 	ds mount kitchen home-test
 run:
-	python single-human.py
+	python single_human.py
 show:
 	dq alice "select cur_time,cur_room,activity where cur_gen==0 | sort cur_time" -f table
