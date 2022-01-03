@@ -6,9 +6,6 @@ Extract data from digis:
 zapi query -I fuse.zed -o lamps.zng
 ```
 
-===
-
-
 In this demo, Amy and I are going to present Zed in action. You will see how the hybrid data model supports data formats for different purposes. How they convert to each other without lossing any data or type information. Also how we can perform search, analytics, and data discovery effectively on the hybrid data model. Here we are going to use a simple IoT dataset which contains the timeseries about 3 lamps from 3 different vendors. 
 
 Let's begin by taking a look at the dataset. To do so, we run:
