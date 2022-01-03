@@ -7,9 +7,10 @@ digi run home h1
 digi space mount r1 r2 h1
 digi check h1 
 digi check r1
-digi check l1
+digi check l1 l2
 digi edit h1
 digi check h1
-digi check l1
+digi check r1 r2
+digi check l1 l2 l3 l4
 ```
 
