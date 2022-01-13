@@ -1,0 +1,269 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash --rcfile ~/.terminalizer/bash_init
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: ./demo/carbon-footprint
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 49
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 26
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 50
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 1200
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: digi
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 3082
+    content: "$ "
+  - delay: 539
+    content: m
+  - delay: 86
+    content: a
+  - delay: 99
+    content: k
+  - delay: 64
+    content: e
+  - delay: 83
+    content: ' '
+  - delay: 116
+    content: r
+  - delay: 57
+    content: u
+  - delay: 151
+    content: 'n'
+  - delay: 184
+    content: "\r\n"
+  - delay: 64
+    content: "digi run lamp l1 l2 l3\r\n"
+  - delay: 2734
+    content: "l3\r\n"
+  - delay: 181
+    content: "l1\r\n"
+  - delay: 48
+    content: "l2\r\n"
+  - delay: 41
+    content: "digi run room r1 r2 r3\r\n"
+  - delay: 3849
+    content: "r2\r\n"
+  - delay: 378
+    content: "r1\r\nr3\r\n"
+  - delay: 124
+    content: "digi run home home\r\n"
+  - delay: 2743
+    content: "home\r\n"
+  - delay: 90
+    content: "digi run scene s1 s2 s3\r\n"
+  - delay: 2821
+    content: "s3\r\n"
+  - delay: 181
+    content: "s1\r\n"
+  - delay: 49
+    content: "s2\r\n"
+  - delay: 23
+    content: "digi run multiscene ms\r\n"
+  - delay: 1781
+    content: "ms\r\n"
+  - delay: 52
+    content: '$ '
+  - delay: 1874
+    content: m
+  - delay: 125
+    content: a
+  - delay: 92
+    content: k
+  - delay: 94
+    content: e
+  - delay: 80
+    content: ' '
+  - delay: 206
+    content: c
+  - delay: 99
+    content: o
+  - delay: 45
+    content: m
+  - delay: 76
+    content: p
+  - delay: 64
+    content: o
+  - delay: 52
+    content: s
+  - delay: 88
+    content: e
+  - delay: 169
+    content: "\r\n"
+  - delay: 23
+    content: "digi space mount l1 s1 r1\r\n"
+  - delay: 763
+    content: "digi space mount l2 s2 r2\r\n"
+  - delay: 735
+    content: "digi space mount l3 s3 r3\r\n"
+  - delay: 756
+    content: "digi space mount r1 r2 r3 home\r\n"
+  - delay: 754
+    content: "digi space pipe ms.output.scenes.s1.objects s1.input.objects &\r\n"
+  - delay: 19
+    content: "digi space pipe ms.output.scenes.s2.objects s2.input.objects &\r\n"
+  - delay: 18
+    content: "digi space pipe ms.output.scenes.s3.objects s3.input.objects\r\n"
+  - delay: 744
+    content: '$ '
+  - delay: 3884
+    content: d
+  - delay: 101
+    content: i
+  - delay: 103
+    content: g
+  - delay: 53
+    content: i
+  - delay: 117
+    content: ' '
+  - delay: 156
+    content: w
+  - delay: 139
+    content: a
+  - delay: 156
+    content: t
+  - delay: 202
+    content: c
+  - delay: 195
+    content: h
+  - delay: 141
+    content: ' '
+  - delay: 284
+    content: h
+  - delay: 88
+    content: o
+  - delay: 132
+    content: m
+  - delay: 133
+    content: e
+  - delay: 622
+    content: "\r\n"
+  - delay: 151
+    content: "\e[?1049h\e[22;0;0t\e[1;26r\e(B\e[m\e[4l\e[?7h\e[H\e[2JapiVersion: mock.digi.dev/v1\r\e[2dkind: Home\r\e[3dmetadata:\e[4;3Hname: home\e[5;3Hnamespace: default\r\e[6dspec:\e[7;3Hcontrol:\e[8;5Hmode:\e[9;7Hintent: adaptive\e[10;7Hstatus: adaptive\e[11;3Hobs:\e[12d\b\brooms:\e[13;7Hr1:\e[14d\bbrightness: 0\e[15;9Hmode: adaptive\e[16;7Hr2:\e[17d\bbrightness: 0\e[18;9Hmode: adaptive\e[19;7Hr3:\e[20d\bbrightness: 0\e[21;9Hmode: adaptive\e[26;49H"
+  - delay: 3367
+    content: "\r\e[19d\e[3L\e[17;21H1\e[19;9Hobjects:\e[20;9H- class: human\e[21;11Hname: bob\e[26;49H"
+  - delay: 7598
+    content: "\e[21;17Hcharlie\e[26;49H"
+  - delay: 11421
+    content: "\e[21;17Halice\e[K\e[25;9Hobjects:\e[26;9H- class: dog\e[49G"
+  - delay: 14090
+    content: "\e[13;20r\e[20;1H\e[3S\e[1;26r\e[16;21r\e[16;1H\e[3T\e[1;26r\e[25;1H\e[J\e[13;8H1\e[16dobjects:\e[17;9H- class: human\e[18;11Hname: charlie\e[19;7Hr2:\e[K\e[20d\bbrightness: 0\e[K\e[21;9Hmode: adaptive\e[26;49H"
+  - delay: 8003
+    content: "\r\e[16d\e[3M\e[14;21H0\e[20d\b1\e[22;9Hobjects:\e[23;9H- class: human\e[24;11Hname: alice\e[26;49H"
+  - delay: 6979
+    content: "\e[25;9H- class: human\e[26;11Hname: charlie\e[49G"
+  - delay: 13346
+    content: "\r\e[16d\e[3L\e[25d\e[J\e[14;21H1\e[16;9Hobjects:\e[17;9H- class: human\e[18;11Hname: alice\e[23d\b0\e[26;49H"
+  - delay: 8996
+    content: "\r\e[16d\e[3M\e[14;21H0\e[20d\b1\e[22;9Hobjects:\e[23;9H- class: human\e[24;11Hname: charlie\e[26;49H"
+  - delay: 7654
+    content: "\e[24;17Halice\e[K\e[26;49H"
+  - delay: 16301
+    content: "\r\e[16d\e[3L\e[14;21H1\e[16;9Hobjects:\e[17;9H- class: human\e[18;11Hname: alice\e[23d\b0\e[26;18Hdog\e[K\e[49G"
+  - delay: 6919
+    content: "\e[14;21H0\e[17;18Hdog\e[K\e[18;17Hmisc\e[K\e[23d1\e[26;18Hhuman\e[49G"
+  - delay: 28366
+    content: "\e[26;1H\e[?1049l\e[23;0;0t\r\e[?1l\e>"
+  - delay: 7
+    content: '$ '
+  - delay: 5734
+    content: "exit\r\n"
