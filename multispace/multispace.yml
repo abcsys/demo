@@ -1,0 +1,1567 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash --rcfile ~/.terminalizer/bash_init
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: ./demo/multispace
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 70
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 20
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 50
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 1000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: digi
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 642
+    content: "\e[?1034h$ "
+  - delay: 566
+    content: d
+  - delay: 108
+    content: i
+  - delay: 75
+    content: g
+  - delay: 61
+    content: i
+  - delay: 81
+    content: ' '
+  - delay: 162
+    content: s
+  - delay: 133
+    content: p
+  - delay: 36
+    content: a
+  - delay: 149
+    content: c
+  - delay: 182
+    content: e
+  - delay: 79
+    content: ' '
+  - delay: 85
+    content: l
+  - delay: 154
+    content: s
+  - delay: 124
+    content: "\r\n"
+  - delay: 135
+    content: "NAME\r\n"
+  - delay: 283
+    content: "\e[40m\e[33mhome\e(B\e[m\r\noffice\r\nschool\r\n"
+  - delay: 5
+    content: '$ '
+  - delay: 434
+    content: d
+  - delay: 142
+    content: i
+  - delay: 42
+    content: g
+  - delay: 95
+    content: i
+  - delay: 59
+    content: ' '
+  - delay: 148
+    content: s
+  - delay: 92
+    content: p
+  - delay: 85
+    content: a
+  - delay: 145
+    content: c
+  - delay: 168
+    content: e
+  - delay: 75
+    content: ' '
+  - delay: 111
+    content: s
+  - delay: 156
+    content: h
+  - delay: 75
+    content: o
+  - delay: 119
+    content: w
+  - delay: 142
+    content: "\r\n"
+  - delay: 263
+    content: "Apiserver:\r\n"
+  - delay: 64
+    content: "\e[0;33mhttps://kubernetes.docker.internal:6443\e[0m\r\n"
+  - delay: 18
+    content: "---\r\n"
+  - delay: 87
+    content: "lake\r\nsyncer\r\n"
+  - delay: 7
+    content: '$ '
+  - delay: 671
+    content: d
+  - delay: 136
+    content: i
+  - delay: 55
+    content: g
+  - delay: 90
+    content: i
+  - delay: 61
+    content: ' '
+  - delay: 152
+    content: s
+  - delay: 80
+    content: p
+  - delay: 71
+    content: a
+  - delay: 125
+    content: c
+  - delay: 179
+    content: e
+  - delay: 66
+    content: ' '
+  - delay: 157
+    content: c
+  - delay: 126
+    content: h
+  - delay: 88
+    content: e
+  - delay: 164
+    content: c
+  - delay: 82
+    content: k
+  - delay: 160
+    content: o
+  - delay: 76
+    content: u
+  - delay: 72
+    content: t
+  - delay: 79
+    content: ' '
+  - delay: 125
+    content: o
+  - delay: 104
+    content: f
+  - delay: 170
+    content: f
+  - delay: 133
+    content: i
+  - delay: 129
+    content: c
+  - delay: 212
+    content: e
+  - delay: 144
+    content: "\r\n"
+  - delay: 182
+    content: "Switched to space office\r\n$ "
+  - delay: 2408
+    content: d
+  - delay: 109
+    content: i
+  - delay: 89
+    content: g
+  - delay: 33
+    content: i
+  - delay: 118
+    content: ' '
+  - delay: 107
+    content: s
+  - delay: 76
+    content: p
+  - delay: 85
+    content: a
+  - delay: 136
+    content: c
+  - delay: 186
+    content: e
+  - delay: 64
+    content: ' '
+  - delay: 101
+    content: l
+  - delay: 87
+    content: s
+  - delay: 92
+    content: ' '
+  - delay: 116
+    content: '-'
+  - delay: 154
+    content: c
+  - delay: 143
+    content: "\r\n"
+  - delay: 46
+    content: "NAME\r\n"
+  - delay: 88
+    content: "office\r\n$ "
+  - delay: 546
+    content: d
+  - delay: 131
+    content: i
+  - delay: 36
+    content: g
+  - delay: 100
+    content: i
+  - delay: 58
+    content: ' '
+  - delay: 168
+    content: s
+  - delay: 80
+    content: p
+  - delay: 90
+    content: a
+  - delay: 128
+    content: c
+  - delay: 193
+    content: e
+  - delay: 85
+    content: ' '
+  - delay: 91
+    content: s
+  - delay: 123
+    content: h
+  - delay: 82
+    content: o
+  - delay: 69
+    content: w
+  - delay: 148
+    content: "\r\n"
+  - delay: 250
+    content: "Apiserver:\r\n"
+  - delay: 118
+    content: "\e[0;33mhttps://api-office-k8s-local-btpmta-938483406.us-west-1.elb.amazonaws.com\e[0m\r\n"
+  - delay: 22
+    content: "---\r\n"
+  - delay: 111
+    content: "lake\r\nsyncer\r\n"
+  - delay: 7
+    content: '$ '
+  - delay: 633
+    content: d
+  - delay: 115
+    content: i
+  - delay: 63
+    content: g
+  - delay: 73
+    content: i
+  - delay: 84
+    content: ' '
+  - delay: 129
+    content: s
+  - delay: 67
+    content: p
+  - delay: 77
+    content: a
+  - delay: 137
+    content: c
+  - delay: 195
+    content: e
+  - delay: 72
+    content: ' '
+  - delay: 121
+    content: s
+  - delay: 156
+    content: h
+  - delay: 76
+    content: o
+  - delay: 93
+    content: w
+  - delay: 62
+    content: ' '
+  - delay: 144
+    content: s
+  - delay: 202
+    content: c
+  - delay: 144
+    content: h
+  - delay: 186
+    content: o
+  - delay: 136
+    content: o
+  - delay: 206
+    content: l
+  - delay: 235
+    content: "\r\n"
+  - delay: 196
+    content: "Apiserver:\r\n"
+  - delay: 149
+    content: "\e[0;33mhttps://api-school-k8s-local-ni5for-1420308682.us-west-2.elb.amazonaws.com\e[0m\r\n"
+  - delay: 27
+    content: "---\r\n"
+  - delay: 172
+    content: "lake\r\nsyncer\r\n"
+  - delay: 470
+    content: "\e[?1034h$ "
+  - delay: 1227
+    content: d
+  - delay: 109
+    content: i
+  - delay: 76
+    content: g
+  - delay: 72
+    content: i
+  - delay: 100
+    content: ' '
+  - delay: 85
+    content: s
+  - delay: 103
+    content: p
+  - delay: 71
+    content: a
+  - delay: 135
+    content: c
+  - delay: 178
+    content: e
+  - delay: 73
+    content: ' '
+  - delay: 176
+    content: c
+  - delay: 111
+    content: h
+  - delay: 91
+    content: e
+  - delay: 175
+    content: c
+  - delay: 72
+    content: k
+  - delay: 147
+    content: o
+  - delay: 92
+    content: u
+  - delay: 100
+    content: t
+  - delay: 71
+    content: ' '
+  - delay: 209
+    content: s
+  - delay: 183
+    content: c
+  - delay: 115
+    content: h
+  - delay: 162
+    content: o
+  - delay: 153
+    content: o
+  - delay: 178
+    content: l
+  - delay: 181
+    content: "\r\n"
+  - delay: 346
+    content: "Switched to space school\r\n$ "
+  - delay: 891
+    content: d
+  - delay: 102
+    content: i
+  - delay: 91
+    content: g
+  - delay: 60
+    content: i
+  - delay: 107
+    content: ' '
+  - delay: 147
+    content: l
+  - delay: 118
+    content: s
+  - delay: 110
+    content: "\r\n"
+  - delay: 49
+    content: "NAME\r\n"
+  - delay: 174
+    content: '$ '
+  - delay: 738
+    content: d
+  - delay: 135
+    content: i
+  - delay: 48
+    content: g
+  - delay: 84
+    content: i
+  - delay: 76
+    content: ' '
+  - delay: 187
+    content: r
+  - delay: 100
+    content: u
+  - delay: 154
+    content: 'n'
+  - delay: 101
+    content: ' '
+  - delay: 125
+    content: l
+  - delay: 131
+    content: a
+  - delay: 48
+    content: m
+  - delay: 91
+    content: p
+  - delay: 73
+    content: ' '
+  - delay: 120
+    content: l
+  - delay: 131
+    content: '1'
+  - delay: 88
+    content: ' '
+  - delay: 104
+    content: l
+  - delay: 112
+    content: '2'
+  - delay: 163
+    content: "\r\n"
+  - delay: 2674
+    content: "l2\r\n"
+  - delay: 7
+    content: "l1\r\n"
+  - delay: 28
+    content: '$ '
+  - delay: 1876
+    content: d
+  - delay: 71
+    content: i
+  - delay: 116
+    content: g
+  - delay: 34
+    content: i
+  - delay: 131
+    content: ' '
+  - delay: 707
+    content: r
+  - delay: 106
+    content: u
+  - delay: 174
+    content: 'n'
+  - delay: 115
+    content: ' '
+  - delay: 195
+    content: r
+  - delay: 279
+    content: o
+  - delay: 153
+    content: o
+  - delay: 96
+    content: m
+  - delay: 138
+    content: ' '
+  - delay: 103
+    content: l
+  - delay: 215
+    content: o
+  - delay: 92
+    content: u
+  - delay: 166
+    content: 'n'
+  - delay: 38
+    content: g
+  - delay: 101
+    content: e
+  - delay: 42
+    content: ' '
+  - delay: 227
+    content: '-'
+  - delay: 171
+    content: v
+  - delay: 158
+    content: "\r\n"
+  - delay: 2556
+    content: "lounge\r\n"
+  - delay: 28
+    content: '$ '
+  - delay: 2004
+    content: d
+  - delay: 123
+    content: i
+  - delay: 80
+    content: g
+  - delay: 67
+    content: i
+  - delay: 119
+    content: ' '
+  - delay: 1804
+    content: c
+  - delay: 100
+    content: h
+  - delay: 111
+    content: e
+  - delay: 185
+    content: c
+  - delay: 74
+    content: k
+  - delay: 132
+    content: ' '
+  - delay: 278
+    content: l
+  - delay: 188
+    content: o
+  - delay: 95
+    content: u
+  - delay: 176
+    content: 'n'
+  - delay: 63
+    content: g
+  - delay: 87
+    content: e
+  - delay: 112
+    content: "\r\n"
+  - delay: 214
+    content: "control:\r\n  brightness:\r\n    intent: 1\r\n    status: 0\r\n  mode:\r\n    intent: work\r\n    status: undef\r\n$ "
+  - delay: 2042
+    content: d
+  - delay: 356
+    content: i
+  - delay: 129
+    content: g
+  - delay: 66
+    content: i
+  - delay: 113
+    content: ' '
+  - delay: 237
+    content: s
+  - delay: 92
+    content: p
+  - delay: 59
+    content: a
+  - delay: 133
+    content: c
+  - delay: 178
+    content: e
+  - delay: 76
+    content: ' '
+  - delay: 84
+    content: m
+  - delay: 121
+    content: o
+  - delay: 121
+    content: u
+  - delay: 159
+    content: 'n'
+  - delay: 63
+    content: t
+  - delay: 53
+    content: ' '
+  - delay: 107
+    content: l
+  - delay: 131
+    content: '1'
+  - delay: 76
+    content: ' '
+  - delay: 127
+    content: l
+  - delay: 84
+    content: '2'
+  - delay: 105
+    content: ' '
+  - delay: 284
+    content: l
+  - delay: 202
+    content: o
+  - delay: 94
+    content: u
+  - delay: 160
+    content: 'n'
+  - delay: 63
+    content: g
+  - delay: 86
+    content: e
+  - delay: 126
+    content: "\r\n"
+  - delay: 913
+    content: '$ '
+  - delay: 1374
+    content: d
+  - delay: 126
+    content: i
+  - delay: 71
+    content: g
+  - delay: 77
+    content: i
+  - delay: 275
+    content: ' '
+  - delay: 371
+    content: c
+  - delay: 89
+    content: h
+  - delay: 112
+    content: e
+  - delay: 168
+    content: c
+  - delay: 88
+    content: k
+  - delay: 400
+    content: ' '
+  - delay: 238
+    content: l
+  - delay: 155
+    content: o
+  - delay: 82
+    content: u
+  - delay: 153
+    content: 'n'
+  - delay: 64
+    content: g
+  - delay: 83
+    content: e
+  - delay: 126
+    content: "\r\n"
+  - delay: 209
+    content: "control:\r\n  brightness:\r\n    intent: 1\r\n    status: 1\r\n  mode:\r\n    intent: work\r\n    status: work\r\n"
+  - delay: 6
+    content: '$ '
+  - delay: 2926
+    content: d
+  - delay: 115
+    content: i
+  - delay: 51
+    content: g
+  - delay: 79
+    content: i
+  - delay: 87
+    content: ' '
+  - delay: 171
+    content: r
+  - delay: 63
+    content: u
+  - delay: 153
+    content: 'n'
+  - delay: 82
+    content: ' '
+  - delay: 133
+    content: s
+  - delay: 176
+    content: c
+  - delay: 195
+    content: e
+  - delay: 118
+    content: 'n'
+  - delay: 123
+    content: e
+  - delay: 126
+    content: ' '
+  - delay: 157
+    content: s
+  - delay: 184
+    content: c
+  - delay: 178
+    content: e
+  - delay: 89
+    content: 'n'
+  - delay: 133
+    content: e
+  - delay: 136
+    content: "\r\n"
+  - delay: 4367
+    content: "scene\r\n"
+  - delay: 32
+    content: '$ '
+  - delay: 9291
+    content: d
+  - delay: 129
+    content: i
+  - delay: 64
+    content: g
+  - delay: 68
+    content: i
+  - delay: 81
+    content: ' '
+  - delay: 96
+    content: s
+  - delay: 113
+    content: p
+  - delay: 76
+    content: a
+  - delay: 141
+    content: c
+  - delay: 186
+    content: e
+  - delay: 58
+    content: ' '
+  - delay: 97
+    content: m
+  - delay: 147
+    content: o
+  - delay: 127
+    content: u
+  - delay: 182
+    content: 'n'
+  - delay: 73
+    content: t
+  - delay: 58
+    content: ' '
+  - delay: 429
+    content: s
+  - delay: 150
+    content: c
+  - delay: 187
+    content: e
+  - delay: 72
+    content: 'n'
+  - delay: 124
+    content: e
+  - delay: 83
+    content: ' '
+  - delay: 172
+    content: l
+  - delay: 205
+    content: o
+  - delay: 93
+    content: u
+  - delay: 171
+    content: 'n'
+  - delay: 97
+    content: g
+  - delay: 77
+    content: e
+  - delay: 112
+    content: "\r\n"
+  - delay: 891
+    content: '$ '
+  - delay: 1790
+    content: d
+  - delay: 169
+    content: i
+  - delay: 92
+    content: g
+  - delay: 48
+    content: i
+  - delay: 133
+    content: ' '
+  - delay: 128
+    content: e
+  - delay: 199
+    content: d
+  - delay: 87
+    content: i
+  - delay: 99
+    content: t
+  - delay: 80
+    content: ' '
+  - delay: 92
+    content: l
+  - delay: 200
+    content: o
+  - delay: 84
+    content: u
+  - delay: 149
+    content: 'n'
+  - delay: 72
+    content: g
+  - delay: 72
+    content: e
+  - delay: 257
+    content: "\r\n"
+  - delay: 346
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[1;18r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[29m\e[m\e[H\e[2J\e[?25l\e[18;1H<000gn/T/digi-edit-lounge612483763\"\r<i-edit-lounge612483763\" 105L, 2284C\e[2;1H▽\e[6n\e[2;1H  \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1HapiVersion: mock.digi.dev/v1\r\nkind: Room\r\nmetadata:\r\n  name: lounge\r\n  namespace: default\r\nspec:\r\n  control:\r\n    brightness:\e[9;7Hintent: 1\e[10;7Hstatus: 1\r\n    mode:\e[12;7Hintent: work\e[13;7Hstatus: work\r\n  meta:\r\n    load_interval: 1\r\n  mount:\r\n    mock.digi.dev/v1/lamps:\e[1;1H\e[?25h\e[?12$p"
+  - delay: 1141
+    content: "\a\e[?25l\e[18;1H\e[K\e[18;1H/\e[?25h"
+  - delay: 1303
+    content: w
+  - delay: 67
+    content: o
+  - delay: 98
+    content: r
+  - delay: 63
+    content: k
+  - delay: 184
+    content: "\r\e[?25l\e[12;15H\e[?25h"
+  - delay: 732
+    content: "\e[?25l\e[18;1H\e[1m-- INSERT --\e[12;19H\e[?25h"
+  - delay: 249
+    content: "\e[?25l\e[m\e[12;18H\e[K\e[12;18H\e[?25h"
+  - delay: 151
+    content: "\e[?25l\e[12;17H\e[K\e[12;17H\e[?25h"
+  - delay: 134
+    content: "\e[?25l\e[12;16H\e[K\e[12;16H\e[?25h"
+  - delay: 134
+    content: "\e[?25l\e[12;15H\e[K\e[12;15H\e[?25h"
+  - delay: 598
+    content: "\e[?25la\e[?25h"
+  - delay: 130
+    content: "\e[?25ld\e[?25h"
+  - delay: 117
+    content: "\e[?25la\e[?25h"
+  - delay: 130
+    content: "\e[?25lp\e[?25h"
+  - delay: 161
+    content: "\e[?25lt\e[?25h"
+  - delay: 118
+    content: "\e[?25li\e[?25h"
+  - delay: 113
+    content: "\e[?25lv\e[?25h"
+  - delay: 119
+    content: "\e[?25le\e[?25h"
+  - delay: 294
+    content: "\e[18;1H\e[K\e[12;22H"
+  - delay: 321
+    content: "\e[?25l\e[?25h\e[?25l\e[18;1H:\e[?25h"
+  - delay: 195
+    content: w
+  - delay: 70
+    content: q
+  - delay: 122
+    content: "\r\e[?25l\e[?2004l\e[>4;m<000gn/T/digi-edit-lounge612483763\""
+  - delay: 39
+    content: "\r<ounge612483763\" 105L, 2288C written"
+  - delay: 5
+    content: "\r\e[23;2t\e[23;1t\r\r\n\e[?2004l\e[?1l\e>\e[?25h\e[>4;m\e[?1049l"
+  - delay: 309
+    content: "room.mock.digi.dev/lounge configured\r\n"
+  - delay: 25
+    content: '$ '
+  - delay: 1262
+    content: d
+  - delay: 89
+    content: i
+  - delay: 42
+    content: g
+  - delay: 77
+    content: i
+  - delay: 93
+    content: ' '
+  - delay: 110
+    content: w
+  - delay: 173
+    content: a
+  - delay: 80
+    content: t
+  - delay: 189
+    content: c
+  - delay: 77
+    content: h
+  - delay: 76
+    content: ' '
+  - delay: 92
+    content: l
+  - delay: 185
+    content: o
+  - delay: 72
+    content: u
+  - delay: 162
+    content: 'n'
+  - delay: 72
+    content: g
+  - delay: 64
+    content: e
+  - delay: 146
+    content: "\r\n"
+  - delay: 255
+    content: "\e[?1049h\e[22;0;0t\e[1;18r\e(B\e[m\e[4l\e[?7h\e[H\e[2JapiVersion: mock.digi.dev/v1\r\e[2dkind: Room\r\e[3dmetadata:\e[4;3Hname: lounge\e[5;3Hnamespace: default\r\e[6dspec:\e[7;3Hcontrol:\e[8;5Hbrightness:\e[9;7Hintent: 1\e[10;7Hstatus: 1\e[11;5Hmode:\e[12;7Hintent: adaptive\e[13;7Hstatus: adaptive\e[14;3Hobs:\e[15d\b\bhuman_presence: true\e[16;5Hobjects:\e[17;5H- class: dog\e[18;7Hlocation:\e[37G"
+  - delay: 5590
+    content: "\e[15;21Hfalse\e[18;37H"
+  - delay: 274
+    content: "\e[10;15H0\e[18;37H"
+  - delay: 916
+    content: "\e[15;21Htrue\e[K\e[18;37H"
+  - delay: 287
+    content: "\e[10;15H1\e[18;37H"
+  - delay: 547
+    content: "\e[17;14Hhuman\e[18;37H"
+  - delay: 1974
+    content: "\e[18;1H\e[?1049l\e[23;0;0t\r\e[?1l\e>"
+  - delay: 7
+    content: '$ '
+  - delay: 644
+    content: "\e[?1034h"
+  - delay: 10
+    content: '$ '
+  - delay: 1137
+    content: d
+  - delay: 108
+    content: i
+  - delay: 76
+    content: g
+  - delay: 74
+    content: i
+  - delay: 89
+    content: ' '
+  - delay: 120
+    content: s
+  - delay: 103
+    content: p
+  - delay: 84
+    content: a
+  - delay: 153
+    content: c
+  - delay: 199
+    content: e
+  - delay: 77
+    content: ' '
+  - delay: 177
+    content: c
+  - delay: 121
+    content: h
+  - delay: 102
+    content: e
+  - delay: 189
+    content: c
+  - delay: 114
+    content: k
+  - delay: 177
+    content: o
+  - delay: 117
+    content: u
+  - delay: 91
+    content: t
+  - delay: 72
+    content: ' '
+  - delay: 211
+    content: h
+  - delay: 122
+    content: o
+  - delay: 102
+    content: m
+  - delay: 97
+    content: e
+  - delay: 183
+    content: "\r\n"
+  - delay: 390
+    content: "Switched to space home\r\n$ "
+  - delay: 1070
+    content: d
+  - delay: 113
+    content: i
+  - delay: 78
+    content: g
+  - delay: 81
+    content: i
+  - delay: 143
+    content: ' '
+  - delay: 127
+    content: l
+  - delay: 124
+    content: s
+  - delay: 173
+    content: "\r\n"
+  - delay: 25
+    content: "NAME\r\n"
+  - delay: 81
+    content: '$ '
+  - delay: 980
+    content: d
+  - delay: 122
+    content: i
+  - delay: 28
+    content: g
+  - delay: 102
+    content: i
+  - delay: 59
+    content: ' '
+  - delay: 178
+    content: r
+  - delay: 58
+    content: u
+  - delay: 151
+    content: 'n'
+  - delay: 102
+    content: ' '
+  - delay: 97
+    content: l
+  - delay: 111
+    content: a
+  - delay: 13
+    content: m
+  - delay: 104
+    content: p
+  - delay: 93
+    content: ' '
+  - delay: 162
+    content: l
+  - delay: 103
+    content: '1'
+  - delay: 97
+    content: ' '
+  - delay: 84
+    content: l
+  - delay: 134
+    content: '2'
+  - delay: 126
+    content: ' '
+  - delay: 229
+    content: l
+  - delay: 153
+    content: '3'
+  - delay: 234
+    content: ' '
+  - delay: 100
+    content: l
+  - delay: 576
+    content: '4'
+  - delay: 131
+    content: "\r\n"
+  - delay: 2490
+    content: "l4\r\n"
+  - delay: 37
+    content: "l1\r\n"
+  - delay: 6
+    content: "l3\r\n"
+  - delay: 49
+    content: "l2\r\n"
+  - delay: 22
+    content: '$ '
+  - delay: 521
+    content: d
+  - delay: 93
+    content: i
+  - delay: 30
+    content: g
+  - delay: 90
+    content: i
+  - delay: 74
+    content: ' '
+  - delay: 150
+    content: r
+  - delay: 44
+    content: u
+  - delay: 161
+    content: 'n'
+  - delay: 68
+    content: ' '
+  - delay: 139
+    content: r
+  - delay: 129
+    content: o
+  - delay: 130
+    content: o
+  - delay: 80
+    content: m
+  - delay: 97
+    content: ' '
+  - delay: 151
+    content: r
+  - delay: 136
+    content: '1'
+  - delay: 126
+    content: ' '
+  - delay: 137
+    content: r
+  - delay: 142
+    content: '2'
+  - delay: 317
+    content: "\r\n"
+  - delay: 1611
+    content: "r1\r\n"
+  - delay: 39
+    content: "r2\r\n"
+  - delay: 21
+    content: '$ '
+  - delay: 447
+    content: d
+  - delay: 111
+    content: i
+  - delay: 40
+    content: g
+  - delay: 81
+    content: i
+  - delay: 68
+    content: ' '
+  - delay: 162
+    content: r
+  - delay: 82
+    content: u
+  - delay: 154
+    content: 'n'
+  - delay: 91
+    content: ' '
+  - delay: 130
+    content: h
+  - delay: 108
+    content: o
+  - delay: 76
+    content: m
+  - delay: 77
+    content: e
+  - delay: 60
+    content: ' '
+  - delay: 120
+    content: h
+  - delay: 93
+    content: o
+  - delay: 79
+    content: m
+  - delay: 86
+    content: e
+  - delay: 55
+    content: ' '
+  - delay: 119
+    content: '-'
+  - delay: 123
+    content: v
+  - delay: 168
+    content: "\r\n"
+  - delay: 1400
+    content: "home\r\n"
+  - delay: 14
+    content: '$ '
+  - delay: 576
+    content: d
+  - delay: 110
+    content: i
+  - delay: 36
+    content: g
+  - delay: 96
+    content: i
+  - delay: 48
+    content: ' '
+  - delay: 159
+    content: c
+  - delay: 60
+    content: h
+  - delay: 130
+    content: e
+  - delay: 170
+    content: c
+  - delay: 118
+    content: k
+  - delay: 99
+    content: ' '
+  - delay: 160
+    content: h
+  - delay: 90
+    content: o
+  - delay: 100
+    content: m
+  - delay: 92
+    content: e
+  - delay: 137
+    content: "\r\n"
+  - delay: 164
+    content: "control:\r\n  mode:\r\n    intent: work\r\n"
+  - delay: 5
+    content: '$ '
+  - delay: 3059
+    content: d
+  - delay: 161
+    content: i
+  - delay: 22
+    content: g
+  - delay: 129
+    content: i
+  - delay: 224
+    content: ' '
+  - delay: 926
+    content: s
+  - delay: 112
+    content: p
+  - delay: 75
+    content: a
+  - delay: 130
+    content: c
+  - delay: 194
+    content: e
+  - delay: 64
+    content: ' '
+  - delay: 80
+    content: m
+  - delay: 144
+    content: o
+  - delay: 158
+    content: u
+  - delay: 265
+    content: 'n'
+  - delay: 209
+    content: t
+  - delay: 59
+    content: ' '
+  - delay: 457
+    content: l
+  - delay: 108
+    content: '1'
+  - delay: 83
+    content: ' '
+  - delay: 130
+    content: l
+  - delay: 118
+    content: '2'
+  - delay: 387
+    content: ' '
+  - delay: 282
+    content: r
+  - delay: 144
+    content: '1'
+  - delay: 615
+    content: "\r\n"
+  - delay: 744
+    content: '$ '
+  - delay: 506
+    content: d
+  - delay: 99
+    content: i
+  - delay: 33
+    content: g
+  - delay: 105
+    content: i
+  - delay: 35
+    content: ' '
+  - delay: 100
+    content: s
+  - delay: 137
+    content: p
+  - delay: 71
+    content: a
+  - delay: 101
+    content: c
+  - delay: 186
+    content: e
+  - delay: 66
+    content: ' '
+  - delay: 131
+    content: m
+  - delay: 105
+    content: o
+  - delay: 129
+    content: u
+  - delay: 147
+    content: 'n'
+  - delay: 67
+    content: t
+  - delay: 49
+    content: ' '
+  - delay: 182
+    content: l
+  - delay: 121
+    content: '3'
+  - delay: 87
+    content: ' '
+  - delay: 117
+    content: l
+  - delay: 134
+    content: '4'
+  - delay: 250
+    content: ' '
+  - delay: 563
+    content: r
+  - delay: 200
+    content: '2'
+  - delay: 197
+    content: "\r\n"
+  - delay: 724
+    content: '$ '
+  - delay: 394
+    content: d
+  - delay: 244
+    content: i
+  - delay: 63
+    content: g
+  - delay: 136
+    content: i
+  - delay: 109
+    content: ' '
+  - delay: 112
+    content: s
+  - delay: 116
+    content: p
+  - delay: 72
+    content: a
+  - delay: 123
+    content: c
+  - delay: 173
+    content: e
+  - delay: 76
+    content: ' '
+  - delay: 67
+    content: m
+  - delay: 112
+    content: o
+  - delay: 129
+    content: u
+  - delay: 153
+    content: 'n'
+  - delay: 76
+    content: t
+  - delay: 56
+    content: ' '
+  - delay: 597
+    content: r
+  - delay: 186
+    content: '1'
+  - delay: 136
+    content: ' '
+  - delay: 134
+    content: r
+  - delay: 251
+    content: '2'
+  - delay: 198
+    content: ' '
+  - delay: 1373
+    content: h
+  - delay: 167
+    content: o
+  - delay: 76
+    content: m
+  - delay: 110
+    content: e
+  - delay: 141
+    content: "\r\n"
+  - delay: 713
+    content: '$ '
+  - delay: 483
+    content: d
+  - delay: 100
+    content: i
+  - delay: 36
+    content: g
+  - delay: 97
+    content: i
+  - delay: 31
+    content: ' '
+  - delay: 253
+    content: c
+  - delay: 91
+    content: h
+  - delay: 114
+    content: e
+  - delay: 160
+    content: c
+  - delay: 76
+    content: k
+  - delay: 149
+    content: ' '
+  - delay: 234
+    content: h
+  - delay: 112
+    content: o
+  - delay: 88
+    content: m
+  - delay: 80
+    content: e
+  - delay: 111
+    content: "\r\n"
+  - delay: 108
+    content: "control:\r\n  mode:\r\n    intent: work\r\n    status: work\r\nobs:\r\n  rooms:\r\n    r1:\r\n      brightness: 1\r\n      mode: work\r\n    r2:\r\n      brightness: 1\r\n      mode: work\r\n"
+  - delay: 7
+    content: '$ '
+  - delay: 3682
+    content: d
+  - delay: 167
+    content: i
+  - delay: 49
+    content: g
+  - delay: 496
+    content: i
+  - delay: 179
+    content: ' '
+  - delay: 159
+    content: e
+  - delay: 178
+    content: d
+  - delay: 136
+    content: i
+  - delay: 96
+    content: t
+  - delay: 92
+    content: ' '
+  - delay: 144
+    content: h
+  - delay: 105
+    content: o
+  - delay: 84
+    content: m
+  - delay: 81
+    content: e
+  - delay: 175
+    content: "\r\n"
+  - delay: 1881
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[1;18r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[29m\e[m\e[H\e[2J\e[?25l\e[18;1H<0000gn/T/digi-edit-home3849550003\"\r<digi-edit-home3849550003\" 48L, 906C\e[2;1H▽\e[6n\e[2;1H  \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1HapiVersion: mock.digi.dev/v1\r\nkind: Home\r\nmetadata:\r\n  name: home\r\n  namespace: default\r\nspec:\r\n  control:\r\n    mode:\e[9;7Hintent: work\e[10;7Hstatus: work\r\n  mount:\r\n    mock.digi.dev/v1/rooms:\e[13;7Hdefault/r1:\e[14;9Hmode: hide\e[15;9Hspec:\e[16;11Hcontrol:\e[17;13Hbrightness:\e[1;1H\e[?25h\e[?12$p"
+  - delay: 1448
+    content: "\a\e[?25l\e[18;1H\e[K\e[18;1H/\e[?25h"
+  - delay: 1959
+    content: w
+  - delay: 70
+    content: o
+  - delay: 115
+    content: r
+  - delay: 86
+    content: k
+  - delay: 169
+    content: "\r\e[?25l\e[9;15H\e[?25h"
+  - delay: 621
+    content: "\e[?25l\e[18;1H\e[1m-- INSERT --\e[9;19H\e[?25h"
+  - delay: 165
+    content: "\e[?25l\e[m\e[9;18H\e[K\e[9;18H\e[?25h"
+  - delay: 132
+    content: "\e[?25l\e[9;17H\e[K\e[9;17H\e[?25h"
+  - delay: 138
+    content: "\e[?25l\e[9;16H\e[K\e[9;16H\e[?25h"
+  - delay: 135
+    content: "\e[?25l\e[9;15H\e[K\e[9;15H\e[?25h"
+  - delay: 61
+    content: "\e[?25ls\e[?25h"
+  - delay: 180
+    content: "\e[?25ll\e[?25h"
+  - delay: 102
+    content: "\e[?25le\e[?25h"
+  - delay: 153
+    content: "\e[?25le\e[?25h"
+  - delay: 87
+    content: "\e[?25lp\e[?25h"
+  - delay: 233
+    content: "\e[18;1H\e[K\e[9;19H"
+  - delay: 299
+    content: "\e[?25l\e[?25h\e[?25l\e[18;1H:\e[?25h"
+  - delay: 200
+    content: w
+  - delay: 76
+    content: q
+  - delay: 99
+    content: "\r\e[?25l\e[?2004l\e[>4;m<0000gn/T/digi-edit-home3849550003\""
+  - delay: 20
+    content: "\r<t-home3849550003\" 48L, 907C written"
+  - delay: 5
+    content: "\r\e[23;2t\e[23;1t\r\r\n\e[?2004l\e[?1l\e>\e[?25h\e[>4;m\e[?1049l"
+  - delay: 150
+    content: "home.mock.digi.dev/home configured\r\n"
+  - delay: 18
+    content: '$ '
+  - delay: 1405
+    content: d
+  - delay: 103
+    content: i
+  - delay: 52
+    content: g
+  - delay: 72
+    content: i
+  - delay: 89
+    content: ' '
+  - delay: 169
+    content: c
+  - delay: 73
+    content: h
+  - delay: 121
+    content: e
+  - delay: 159
+    content: c
+  - delay: 76
+    content: k
+  - delay: 113
+    content: ' '
+  - delay: 145
+    content: h
+  - delay: 96
+    content: o
+  - delay: 95
+    content: m
+  - delay: 89
+    content: e
+  - delay: 127
+    content: "\r\n"
+  - delay: 106
+    content: "control:\r\n  mode:\r\n    intent: sleep\r\n    status: sleep\r\nobs:\r\n  rooms:\r\n    r1:\r\n      brightness: 0\r\n      mode: sleep\r\n    r2:\r\n      brightness: 0\r\n      mode: sleep\r\n$ "
+  - delay: 460
+    content: d
+  - delay: 100
+    content: i
+  - delay: 57
+    content: g
+  - delay: 76
+    content: i
+  - delay: 84
+    content: ' '
+  - delay: 152
+    content: c
+  - delay: 80
+    content: h
+  - delay: 115
+    content: e
+  - delay: 175
+    content: c
+  - delay: 88
+    content: k
+  - delay: 109
+    content: ' '
+  - delay: 74
+    content: l
+  - delay: 143
+    content: '1'
+  - delay: 131
+    content: "\r\n"
+  - delay: 101
+    content: "control:\r\n  brightness:\r\n    intent: 0.5\r\n    status: 0\r\n  power:\r\n    intent: \"off\"\r\n    status: \"off\"\r\n$ "
+  - delay: 3118
+    content: "exit\r\n"

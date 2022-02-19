@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+        name: {{ .Values.name }}
+    spec:
+      serviceAccountName: {{ .Values.name }}
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: {{ .Values.name }}
+          image: {{ .Values.image }}
+          imagePullPolicy: {{ .Values.imagepull }}
+          env:
+          # digi info
+          - name: GROUP
+            value: {{ .Values.group }}
+          - name: VERSION
+            value: {{ .Values.version }}
+          - name: PLURAL
+            value: {{ .Values.plural }}
+          - name: NAME
+            value: {{ .Values.name }}
+          - name: NAMESPACE
+            value: {{ .Values.namespace }}
+          # configurations
+          - name: MOUNTER
+            value: {{ quote .Values.mounter }}
+          - name: LOGLEVEL
+            value: {{ .Values.log_level | default 20 | quote }}
+          # pool
+          - name: POOL_PROVIDER
+            value: {{ quote .Values.pool_provider }}
+          # composition
+          - name: STRICT_MOUNT
+            value: {{ quote .Values.strict_mount }}
+          - name: TRIM_MOUNT_ON_LOAD
+            value: {{ quote .Values.trim_mount_on_load }}
+          # visualization
+          - name: VISUAL
+            value: {{ quote .Values.visual }}
+          - name: VISUAL_TYPE
+            value: {{ quote .Values.visual_type }}
+          - name: VISUAL_REFRESH_INTERVAL
+            value: {{ .Values.visual_refresh_interval | default 1000 | quote }}
+          ports:
+          - containerPort: 7534
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    name: {{ .Values.name }}
+    app: digi
+spec:
+  ports:
+  - port: 7534
+    targetPort: 7534
+    protocol: TCP
+  selector:
+    name: {{ .Values.name }}

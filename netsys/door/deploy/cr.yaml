@@ -1,0 +1,5 @@
+apiVersion: netsys.demo.digi.dev/v1
+kind: Door
+metadata:
+  name: {{ .Values.name }}
+spec: {}

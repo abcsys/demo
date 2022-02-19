@@ -1,0 +1,8 @@
+group: aws.mock.digi.dev
+image: silveryfu/lamp.v1.aws.mock.digi.dev:latest
+imagepull: Always
+mounter: false
+name: lamp
+namespace: default
+plural: lamps
+version: v1

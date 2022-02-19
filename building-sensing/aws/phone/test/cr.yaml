@@ -1,0 +1,7 @@
+apiVersion: building-sensing.demo.digi.dev/v1
+kind: Phone
+metadata:
+  name: phone-test
+spec:
+  meta:
+    endpoint: ""

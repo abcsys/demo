@@ -1,0 +1,5 @@
+apiVersion: aws.mock.digi.dev/v1
+kind: Lamp
+metadata:
+  name: lamp-test
+spec: {}

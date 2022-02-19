@@ -6,8 +6,8 @@ query:
 .PHONY: run compose all stop
 run:
 	digi run lamp l1 l2 l3
-	digi run room r1 r2 r3
-	digi run home home
+	digi run -v room r1 r2 r3
+	digi run -v home home
 	digi run scene s1 s2 s3
 	digi run multiscene ms
 compose:

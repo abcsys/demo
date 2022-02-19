@@ -1,0 +1,12 @@
+name:
+    css: '#productTitle'
+    type: Text
+availability:
+    css: '#availability'
+    type: Text
+price:
+    css: span.a-price span.a-offscreen
+    type: Text
+rating:
+    css: i.averageStarRating span.a-icon-alt
+    type: Text

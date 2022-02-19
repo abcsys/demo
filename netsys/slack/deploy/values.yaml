@@ -1,0 +1,8 @@
+group: netsys.demo.digi.dev
+image: silveryfu/slack.v1.netsys.demo.digi.dev:latest
+imagepull: Always
+mounter: false
+name: slack
+namespace: default
+plural: slacks
+version: v1

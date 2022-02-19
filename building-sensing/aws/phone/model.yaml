@@ -1,0 +1,9 @@
+group: aws.building-sensing.demo.digi.dev
+version: v1
+kind: Phone
+meta:
+  endpoint: string
+obs:
+  temperature: number
+  unit: string
+  reason: string

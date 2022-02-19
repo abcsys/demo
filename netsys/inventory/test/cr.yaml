@@ -1,0 +1,5 @@
+apiVersion: netsys.demo.digi.dev/v1
+kind: Inventory
+metadata:
+  name: inventory-test
+spec: {}

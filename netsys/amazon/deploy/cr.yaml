@@ -1,0 +1,9 @@
+apiVersion: netsys.demo.digi.dev/v1
+kind: Amazon
+metadata:
+  name: {{ .Values.name }}
+spec:
+  meta:
+    refresh_interval: 3600
+    source: "https://www.amazon.com/Coke-18-pack-12-Cans/dp/B088KPCRD8/"
+    fake: true

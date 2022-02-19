@@ -1,0 +1,8 @@
+group: netsys.demo.digi.dev
+image: silveryfu/inventory.v1.netsys.demo.digi.dev:latest
+imagepull: Always
+mounter: false
+name: inventory
+namespace: default
+plural: inventories
+version: v1

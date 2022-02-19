@@ -1,0 +1,14 @@
+group: netsys.demo.digi.dev
+version: v1
+kind: Inventory
+obs:
+  drinks:
+    openapi:
+      additionalProperties:
+        properties:
+          name:
+            type: string
+          quantity:
+            type: number
+        type: object
+      type: object

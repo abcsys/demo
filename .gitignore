@@ -246,3 +246,4 @@ BenchmarkDotNet.Artifacts/
 *.json
 *.parquet
 *.csv
+private.pem.key

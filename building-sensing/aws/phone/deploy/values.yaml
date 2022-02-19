@@ -1,0 +1,8 @@
+group: building-sensing.demo.digi.dev
+image: silveryfu/phone.v1.building-sensing.demo.digi.dev:latest
+imagepull: Always
+mounter: false
+name: phone
+namespace: default
+plural: phones
+version: v1

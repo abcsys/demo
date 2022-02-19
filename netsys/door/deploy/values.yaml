@@ -1,0 +1,8 @@
+group: netsys.demo.digi.dev
+image: silveryfu/door.v1.netsys.demo.digi.dev:latest
+imagepull: Always
+mounter: false
+name: door
+namespace: default
+plural: doors
+version: v1

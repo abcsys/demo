@@ -1,0 +1,11 @@
+apiVersion: building-sensing.demo.digi.dev/v1
+kind: Phone
+metadata:
+  name: {{ .Values.name }}
+spec:
+  meta:
+    endpoint: a2a6xj2fonl2zb-ats.iot.us-west-2.amazonaws.com
+  obs:
+    temperature: 1
+    unit: "F"
+    reason: "test"

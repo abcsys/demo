@@ -1,0 +1,9 @@
+group: netsys.demo.digi.dev
+version: v1
+kind: Coke
+obs:
+  price: number
+  available: boolean
+mount:
+  netsys.demo.digi.dev/v1/amazons: object
+

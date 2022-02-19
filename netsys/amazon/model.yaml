@@ -1,0 +1,13 @@
+group: netsys.demo.digi.dev
+version: v1
+kind: Amazon
+obs:
+  product_name: string
+  rating: number
+  price: number
+  available: boolean
+  stock: number
+meta:
+  source: string
+  refresh_interval: number
+  fake: boolean

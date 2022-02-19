@@ -1,0 +1,8 @@
+group: netsys.demo.digi.dev
+image: silveryfu/kitchen.v1.netsys.demo.digi.dev:latest
+imagepull: Always
+mounter: false
+name: kitchen
+namespace: default
+plural: kitchens
+version: v1

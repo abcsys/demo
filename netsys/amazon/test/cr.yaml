@@ -1,0 +1,8 @@
+apiVersion: netsys.demo.digi.dev/v1
+kind: Amazon
+metadata:
+  name: amazon-test
+spec:
+  meta:
+    refresh_interval: 0
+    source: ''
