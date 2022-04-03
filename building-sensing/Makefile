@@ -1,28 +1,31 @@
+.PHONY: run stop
+run:
+	python expt.py
+stop:
+	digi stop `digi ls -q`
+
 .PHONY: min build stop
 build:
 	digi build lamp occupancy
 min:
 	digi run lamp l1
 	digi run appliance a1
-	digi run underdesk d1
-	digi run occupancy o1
 	digi run room r1
 	digi run floor f1
 	digi run group g1
 	digi run building b1
 	digi run campus c1
-	digi space mount l1 a1 d1 o1 r1
+	digi space mount l1 a1 r1
 	digi space mount r1 f1
 	digi space mount r1 g1
 	digi space mount f1 b1
 	digi space mount b1 c1
-stop:
-	digi stop `digi ls -q`
-.PHONY: kw rank
-kw:
+# TBD use python script
+.PHONY: lamp energy kw rank
+lamp:
+	digi run lamp l1
 	digi run appliance a1
-	digi run room r1
-	digi space mount a1 r1
+energy: | min
 rank:
 	digi run appliance a1 a2 a3
 	digi run room r1 r2
@@ -30,3 +33,7 @@ rank:
 	digi space mount a1 r1
 	digi space mount a2 a3 r2
 	digi space mount r1 r2 b1
+kw:
+	digi run appliance a1
+	digi run room r1
+	digi space mount a1 r1

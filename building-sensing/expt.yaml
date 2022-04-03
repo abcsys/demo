@@ -1,0 +1,37 @@
+apiVersion: building-sensing.digi.dev/v1
+kind: Experiment
+metadata:
+  name: energy
+spec:
+  single-device:
+    digi:
+      lamp: [ l1 ]
+    mount: [ ]
+    query:
+      - "l1 avg(watt)"
+    remote: false   # default
+
+  by-context:
+    digi:
+      lamp: [ l1 ]
+      appliance: [ a1 ]
+      room: [ r1 ]
+      floor: [ f1 ]
+      group: [ g1 ]
+      building: [ b1 ]
+      campus: [ c1 ]
+    mount:
+      - l1 a1 r1    # child [child..] parent
+      - r1 f1
+      - r1 g1
+      - f1 b1
+      - b1 c1
+    query:
+      - l1 "max(watt)"
+      - r1@energy "max(watt)"
+      - f1@energy "max(watt)"
+      - g1@energy "max(watt)"
+      - b1@energy "max(watt)"
+      - c1@energy "max(watt)"
+
+
