@@ -1,3 +1,11 @@
 group: netsys.demo.digi.dev
 version: v1
 kind: Netsys
+ingress:
+  power: object
+  occupancy: object
+egress:
+  avg_power: object
+  avg_occupancy: object
+mount:
+  mock.digi.dev/v1/rooms: object
