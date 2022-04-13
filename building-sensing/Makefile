@@ -57,6 +57,18 @@ occupancy:
 	digi space mount ud1 ud2 ud3 ud4 r1
 	digi space mount ud5 ud6 r2
 	digi space mount r1 r2 b1
-corr: | occupancy
+corr:
+	digi run underdesk ud1
 	digi run appliance a1
-	digi space mount a1 r1
+	digi run room r1
+	digi space mount ud1 a1 r1
+
+.PHONY: phone-occupancy phone-noise
+phone-occupancy:
+	digi run phone p1
+	digi run room r1
+	digi space mount p1 r1
+phone-noise:
+	digi run phone p1
+	digi run room r1
+	digi space mount p1 r1
