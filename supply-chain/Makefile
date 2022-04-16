@@ -1,12 +1,19 @@
-.PHONY: stop test
+.PHONY: stop port airport
 stop:
 	digi stop `digi ls -q`
-test:
+port:
 	digi run ship s1
 	digi run port p1
 	digi space mount s1 p1
 	sleep 5
 	digi space mount -d s1 p1
+airport:
+	digi run plane l1
+	digi run airport a1
+	digi space mount l1 a1
+	sleep 5
+	digi space mount -d l1 a1
+
 .PHONY: delay delay-run
 delay:
 	digi run airport a1 a2

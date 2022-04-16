@@ -1,0 +1,9 @@
+group: lifelogging.demo.digi.dev
+image: silveryfu/home.v1.lifelogging.demo.digi.dev:latest
+imagepull: Always
+kind: Home
+mounter: false
+name: home
+namespace: default
+plural: homes
+version: v1

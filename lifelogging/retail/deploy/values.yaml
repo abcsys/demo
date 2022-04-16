@@ -1,0 +1,9 @@
+group: lifelogging.demo.digi.dev
+image: silveryfu/retail.v1.lifelogging.demo.digi.dev:latest
+imagepull: Always
+kind: Retail
+mounter: false
+name: retail
+namespace: default
+plural: retails
+version: v1

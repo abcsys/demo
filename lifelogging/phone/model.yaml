@@ -1,0 +1,7 @@
+group: lifelogging.demo.digi.dev
+version: v1
+kind: Phone
+mount:
+  lifelogging.demo.digi.dev/v1/offices: object
+  lifelogging.demo.digi.dev/v1/homes: object
+  lifelogging.demo.digi.dev/v1/retails: object

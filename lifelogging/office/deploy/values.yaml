@@ -1,0 +1,9 @@
+group: lifelogging.demo.digi.dev
+image: silveryfu/office.v1.lifelogging.demo.digi.dev:latest
+imagepull: Always
+kind: Office
+mounter: false
+name: office
+namespace: default
+plural: offices
+version: v1

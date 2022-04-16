@@ -1,0 +1,7 @@
+group: lifelogging.demo.digi.dev
+version: v1
+kind: Office
+egress:
+  energy: object
+mount:
+  mock.digi.dev/v1/lamps: object

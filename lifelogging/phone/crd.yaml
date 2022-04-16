@@ -1,0 +1,74 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: phones.lifelogging.demo.digi.dev
+spec:
+  group: lifelogging.demo.digi.dev
+  names:
+    kind: Phone
+    listKind: PhoneList
+    plural: phones
+    singular: phone
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              mount:
+                properties:
+                  lifelogging.demo.digi.dev/v1/homes:
+                    additionalProperties:
+                      properties:
+                        generation:
+                          type: number
+                        mode:
+                          type: string
+                        spec:
+                          properties: {}
+                          type: object
+                        status:
+                          type: string
+                      type: object
+                    type: object
+                  lifelogging.demo.digi.dev/v1/offices:
+                    additionalProperties:
+                      properties:
+                        generation:
+                          type: number
+                        mode:
+                          type: string
+                        spec:
+                          properties: {}
+                          type: object
+                        status:
+                          type: string
+                      type: object
+                    type: object
+                  lifelogging.demo.digi.dev/v1/retails:
+                    additionalProperties:
+                      properties:
+                        generation:
+                          type: number
+                        mode:
+                          type: string
+                        spec:
+                          properties: {}
+                          type: object
+                        status:
+                          type: string
+                      type: object
+                    type: object
+                type: object
+            type: object
+        type: object
+    served: true
+    storage: true
