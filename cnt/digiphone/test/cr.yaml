@@ -1,0 +1,8 @@
+apiVersion: campus.digi.dev/v1
+kind: Digiphone
+metadata:
+  name: digiphone
+spec:
+  egress:
+    connectivity:
+      flow: "activeMeasurement"

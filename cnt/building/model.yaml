@@ -1,0 +1,14 @@
+group: campus.digi.dev
+version: v1
+kind: Building
+ingress:
+  energy: object
+  room_occupancy: object
+  occupancy: object
+egress:
+  energy: object
+  energy_rank: object
+  occupancy: object
+mount:
+  campus.digi.dev/v1/rooms: object
+  campus.digi.dev/v1/digiphones: object
