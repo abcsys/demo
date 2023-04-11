@@ -22,11 +22,9 @@ spec:
       flow: "sort -r event_ts | head"
       flow_agg: "select avg(spl) as noise"
       eoio: false
-        #    connectivity:
-        #      sources: [ kind:digiphone@connectivity ]
-        #      flow_agg: "select avg(activeMeasurement)"
-    occupancy:
+    connectivity:
       sources: [ kind:digiphone@connectivity ]
+      skip_history: true
       patch_source: true
   egress:
     energy:

@@ -3,3 +3,5 @@ version: v1
 kind: Digiphone
 egress:
   connectivity: object
+  location: object
+  bssid: string

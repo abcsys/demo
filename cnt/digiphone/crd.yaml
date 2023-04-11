@@ -25,7 +25,29 @@ spec:
             properties:
               egress:
                 properties:
+                  bssid:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
                   connectivity:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  location:
                     properties:
                       driver_managed:
                         type: boolean

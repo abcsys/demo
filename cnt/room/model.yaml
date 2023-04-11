@@ -50,6 +50,8 @@ ingress:
   occupancy: object
   desk_occupancy: object
   noise: object
+  location: object
+  connectivity: object
 egress:
   energy: object
   energy_rank: object
