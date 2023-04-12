@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.name }}
 spec:
   egress:
-    connectivity:
+    activeMeasurement:
       flow: "activeMeasurement"
     bssid:
       flow: "network != null | sort -r event_ts | head | cut bssid:=network.bssid,event_ts"

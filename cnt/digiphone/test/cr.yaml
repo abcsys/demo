@@ -4,5 +4,5 @@ metadata:
   name: digiphone
 spec:
   egress:
-    connectivity:
+    activeMeasurement:
       flow: "activeMeasurement"

@@ -4,21 +4,35 @@ metadata:
   name: {{ .Values.name }}
 spec:
   ingress:
-    energy:
-      sources: [ kind:any@energy ]
-      patch_source: true
     occupancy:
       sources: [ kind:room@occupancy ]
-      flow: "sort -r event_ts | head" # at-most-once
+      flow: "sort -r event_ts | head"
+      flow_agg: |-
+        put building_occupancy:=sum(occupancy) |
+        cut building_occupancy
+    utilization:
+      sources: [ kind:room@occupancy ]
+      flow: "sort -r event_ts | head"
       flow_agg: |-
         put total:=count() |
         occupancy > 0 |
-        put building_occupancy:=cast(count(), <float64>)/total |
-        cut building_occupancy
+        put building_utilization:=cast(count(), <float64>)/total |
+        cut building_utilization
       patch_source: true
       eoio: false
+    networkSpeed:
+      sources: [ kind:room@networkSpeed ]
+      flow: "sort -r event_ts | head"
+      flow_agg: |-
+        put downloadSpeed:=avg(networkSpeed.downloadSpeed) |
+        put uploadSpeed:=avg(networkSpeed.uploadSpeed) |
+        put ping:=avg(networkSpeed.ping) |
+        put building_network_speed:={downloadSpeed,uploadSpeed,ping} |
+        cut building_network_speed
   egress:
-    energy:
-      flow: "watt | cut watt,event_ts"
     occupancy:
       flow: "building_occupancy | rename occupancy := building_occupancy"
+    utilization:
+      flow: "building_utilization | rename utilization := building_utilization"
+    networkSpeed:
+      flow: "building_network_speed | rename networkSpeed := building_network_speed"

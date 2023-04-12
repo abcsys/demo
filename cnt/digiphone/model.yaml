@@ -2,6 +2,6 @@ group: campus.digi.dev
 version: v1
 kind: Digiphone
 egress:
-  connectivity: object
+  activeMeasurement: object
   location: object
   bssid: string

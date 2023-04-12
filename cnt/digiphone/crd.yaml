@@ -25,7 +25,7 @@ spec:
             properties:
               egress:
                 properties:
-                  bssid:
+                  activeMeasurement:
                     properties:
                       driver_managed:
                         type: boolean
@@ -36,7 +36,7 @@ spec:
                       pause:
                         type: boolean
                     type: object
-                  connectivity:
+                  bssid:
                     properties:
                       driver_managed:
                         type: boolean

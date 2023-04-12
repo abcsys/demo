@@ -3,35 +3,24 @@ kind: Room
 metadata:
   name: {{ .Values.name }}
 spec:
-  meta:
-    auto_brightness: false
-  control:
-    brightness:
-      intent: 1
-    mode:
-      intent: work
   ingress:
-    device_energy:
-      sources: [ kind:any@energy ]
+    activeMeasurement:
+      sources: [ kind:digiphone@activeMeasurement ]
+      skip_history: true
+      patch_source: true
+    networkSpeed:
+      sources: [ kind:digiphone@activeMeasurement ]
       flow: "sort -r event_ts | head"
-      flow_agg: "select sum(watt) as watt"
-      eoio: false
-    # noise pollution: inst. to avg.
-    noise:
-      sources: [ kind:phone@spl ]
-      flow: "sort -r event_ts | head"
-      flow_agg: "select avg(spl) as noise"
-      eoio: false
-    connectivity:
-      sources: [ kind:digiphone@connectivity ]
+      flow_agg: |-
+        put downloadSpeed:=8 * cast(activeMeasurement.download.TCPInfo.BytesAcked, <float64>) / cast(activeMeasurement.download.TCPInfo.ElapsedTime, <float64>) |
+        put uploadSpeed:=8 * cast(activeMeasurement.upload.TCPInfo.BytesReceived, <float64>) / cast(activeMeasurement.upload.TCPInfo.ElapsedTime, <float64>) |
+        put ping:=cast(activeMeasurement.upload.TCPInfo.MinRTT, <float64>) / 1000 |
+        put networkSpeed:={downloadSpeed,uploadSpeed,ping} |
+        cut networkSpeed
       skip_history: true
       patch_source: true
   egress:
-    energy:
-      flow: "watt | cut watt,event_ts"
     occupancy:
       flow: "occupancy | cut occupancy,event_ts"
-    people_count:
-      flow: "num_human | cut num_human,event_ts | rename count:=num_human"
-    noise:
-      flow: "noise | cut noise,event_ts"
+    networkSpeed:
+      flow: "networkSpeed | cut networkSpeed,event_ts"
