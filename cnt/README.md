@@ -5,7 +5,7 @@ This article aims to demonstrate the power of the dSpace network, enabling data 
 ## Setup
 First, in order to enable communciations between the digilite and digiphone, the EMQX meta digi is used. To start it, run `digi space start emqx`.
 
-Next, clone the [CNT demo directory](https://github.com/digi-project/demo/tree/cnt/cnt) in order to have all of the digis required for this demo (building, room, and digiphone). Additionally, this directory contains the dynamic room mounting script.
+Next, clone the [CNT demo directory](https://github.com/digi-project/demo/tree/main/cnt) in order to have all of the digis required for this demo (building, room, and digiphone). Additionally, this directory contains the dynamic room mounting script.
 
 Run the digis to model the physical layout of Soda Hall.
 
