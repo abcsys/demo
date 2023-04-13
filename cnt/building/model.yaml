@@ -1,0 +1,14 @@
+group: campus.digi.dev
+version: v1
+kind: Building
+ingress:
+  occupancy: object
+  utilization: object
+  networkSpeed: object
+egress:
+  occupancy: object
+  utilization: object
+  networkSpeed: object
+mount:
+  campus.digi.dev/v1/rooms: object
+  campus.digi.dev/v1/digiphones: object

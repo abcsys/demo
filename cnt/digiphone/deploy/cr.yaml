@@ -1,0 +1,10 @@
+apiVersion: campus.digi.dev/v1
+kind: Digiphone
+metadata:
+  name: {{ .Values.name }}
+spec:
+  egress:
+    activeMeasurement:
+      flow: "activeMeasurement"
+    bssid:
+      flow: "network != null | sort -r event_ts | head | cut bssid:=network.bssid,event_ts"

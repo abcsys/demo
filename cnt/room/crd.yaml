@@ -1,0 +1,148 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: rooms.campus.digi.dev
+spec:
+  group: campus.digi.dev
+  names:
+    kind: Room
+    listKind: RoomList
+    plural: rooms
+    singular: room
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              egress:
+                properties:
+                  networkSpeed:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  occupancy:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                type: object
+              ingress:
+                properties:
+                  activeMeasurement:
+                    properties:
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      flow_agg:
+                        type: string
+                      patch_source:
+                        type: boolean
+                      pause:
+                        type: boolean
+                      skip_history:
+                        type: boolean
+                      source:
+                        items:
+                          properties:
+                            egress:
+                              type: string
+                            group:
+                              type: string
+                            kind:
+                              type: string
+                            name:
+                              type: string
+                            namespace:
+                              type: string
+                            version:
+                              type: string
+                          type: object
+                        type: array
+                      sources:
+                        items:
+                          type: string
+                        type: array
+                      use_sourcer:
+                        type: boolean
+                    type: object
+                type: object
+              mount:
+                properties:
+                  campus.digi.dev/v1/digiphones:
+                    additionalProperties:
+                      properties:
+                        generation:
+                          type: number
+                        mode:
+                          type: string
+                        spec:
+                          properties:
+                            egress:
+                              properties:
+                                activeMeasurement:
+                                  properties:
+                                    driver_managed:
+                                      type: boolean
+                                    eoio:
+                                      type: boolean
+                                    flow:
+                                      type: string
+                                    pause:
+                                      type: boolean
+                                  type: object
+                                bssid:
+                                  properties:
+                                    driver_managed:
+                                      type: boolean
+                                    eoio:
+                                      type: boolean
+                                    flow:
+                                      type: string
+                                    pause:
+                                      type: boolean
+                                  type: object
+                                location:
+                                  properties:
+                                    driver_managed:
+                                      type: boolean
+                                    eoio:
+                                      type: boolean
+                                    flow:
+                                      type: string
+                                    pause:
+                                      type: boolean
+                                  type: object
+                              type: object
+                          type: object
+                        status:
+                          type: string
+                      type: object
+                    type: object
+                type: object
+            type: object
+        type: object
+    served: true
+    storage: true

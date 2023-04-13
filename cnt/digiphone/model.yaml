@@ -1,0 +1,7 @@
+group: campus.digi.dev
+version: v1
+kind: Digiphone
+egress:
+  activeMeasurement: object
+  location: object
+  bssid: string

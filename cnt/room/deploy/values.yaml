@@ -1,0 +1,9 @@
+group: campus.digi.dev
+image: jamsheedmistri/room.v1.campus.digi.dev:latest
+imagepull: Always
+kind: Room
+mounter: true
+name: room
+namespace: default
+plural: rooms
+version: v1

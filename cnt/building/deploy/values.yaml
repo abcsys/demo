@@ -1,0 +1,9 @@
+group: campus.digi.dev
+image: jamsheedmistri/building.v1.campus.digi.dev:latest
+imagepull: Always
+kind: Building
+mounter: true
+name: building
+namespace: default
+plural: buildings
+version: v1
