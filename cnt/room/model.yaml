@@ -3,7 +3,6 @@ version: v1
 kind: Room
 ingress:
   activeMeasurement: object
-  networkSpeed: object
 egress:
   occupancy: object
   networkSpeed: object

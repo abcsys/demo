@@ -8,19 +8,14 @@ spec:
       sources: [ kind:digiphone@activeMeasurement ]
       skip_history: true
       patch_source: true
+  egress:
+    occupancy:
+      flow: "occupancy | cut occupancy,event_ts"
     networkSpeed:
-      sources: [ kind:digiphone@activeMeasurement ]
-      flow: "sort -r event_ts | head"
-      flow_agg: |-
+      flow: |-
+        activeMeasurement | sort -r event_ts | head |
         put downloadSpeed:=8 * cast(activeMeasurement.download.TCPInfo.BytesAcked, <float64>) / cast(activeMeasurement.download.TCPInfo.ElapsedTime, <float64>) |
         put uploadSpeed:=8 * cast(activeMeasurement.upload.TCPInfo.BytesReceived, <float64>) / cast(activeMeasurement.upload.TCPInfo.ElapsedTime, <float64>) |
         put ping:=cast(activeMeasurement.upload.TCPInfo.MinRTT, <float64>) / 1000 |
         put networkSpeed:={downloadSpeed,uploadSpeed,ping} |
         cut networkSpeed
-      skip_history: true
-      patch_source: true
-  egress:
-    occupancy:
-      flow: "occupancy | cut occupancy,event_ts"
-    networkSpeed:
-      flow: "networkSpeed | cut networkSpeed,event_ts"
