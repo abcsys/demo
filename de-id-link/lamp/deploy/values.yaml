@@ -1,0 +1,9 @@
+group: deid.demo.digi.dev
+image: silveryfu/lamp.v1.deid.demo.digi.dev:latest
+imagepull: Always
+kind: Lamp
+mounter: true
+name: lamp
+namespace: default
+plural: lamps
+version: v1

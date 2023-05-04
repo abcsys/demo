@@ -1,0 +1,448 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: rooms.deid.demo.digi.dev
+spec:
+  group: deid.demo.digi.dev
+  names:
+    kind: Room
+    listKind: RoomList
+    plural: rooms
+    singular: room
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              control:
+                properties:
+                  ambiance_color:
+                    properties:
+                      intent:
+                        type: string
+                      status:
+                        type: string
+                    type: object
+                  brightness:
+                    properties:
+                      intent:
+                        type: number
+                      status:
+                        type: number
+                    type: object
+                  mode:
+                    properties:
+                      intent:
+                        type: string
+                      status:
+                        type: string
+                    type: object
+                type: object
+              egress:
+                properties:
+                  desk_occupancy:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  energy:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  energy_rank:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  noise:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  occupancy:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                  people_count:
+                    properties:
+                      driver_managed:
+                        type: boolean
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      pause:
+                        type: boolean
+                    type: object
+                type: object
+              ingress:
+                properties:
+                  desk_occupancy:
+                    properties:
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      flow_agg:
+                        type: string
+                      patch_source:
+                        type: boolean
+                      pause:
+                        type: boolean
+                      skip_history:
+                        type: boolean
+                      source:
+                        items:
+                          properties:
+                            egress:
+                              type: string
+                            group:
+                              type: string
+                            kind:
+                              type: string
+                            name:
+                              type: string
+                            namespace:
+                              type: string
+                            version:
+                              type: string
+                          type: object
+                        type: array
+                      sources:
+                        items:
+                          type: string
+                        type: array
+                      use_sourcer:
+                        type: boolean
+                    type: object
+                  device_energy:
+                    properties:
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      flow_agg:
+                        type: string
+                      patch_source:
+                        type: boolean
+                      pause:
+                        type: boolean
+                      skip_history:
+                        type: boolean
+                      source:
+                        items:
+                          properties:
+                            egress:
+                              type: string
+                            group:
+                              type: string
+                            kind:
+                              type: string
+                            name:
+                              type: string
+                            namespace:
+                              type: string
+                            version:
+                              type: string
+                          type: object
+                        type: array
+                      sources:
+                        items:
+                          type: string
+                        type: array
+                      use_sourcer:
+                        type: boolean
+                    type: object
+                  noise:
+                    properties:
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      flow_agg:
+                        type: string
+                      patch_source:
+                        type: boolean
+                      pause:
+                        type: boolean
+                      skip_history:
+                        type: boolean
+                      source:
+                        items:
+                          properties:
+                            egress:
+                              type: string
+                            group:
+                              type: string
+                            kind:
+                              type: string
+                            name:
+                              type: string
+                            namespace:
+                              type: string
+                            version:
+                              type: string
+                          type: object
+                        type: array
+                      sources:
+                        items:
+                          type: string
+                        type: array
+                      use_sourcer:
+                        type: boolean
+                    type: object
+                  occupancy:
+                    properties:
+                      eoio:
+                        type: boolean
+                      flow:
+                        type: string
+                      flow_agg:
+                        type: string
+                      patch_source:
+                        type: boolean
+                      pause:
+                        type: boolean
+                      skip_history:
+                        type: boolean
+                      source:
+                        items:
+                          properties:
+                            egress:
+                              type: string
+                            group:
+                              type: string
+                            kind:
+                              type: string
+                            name:
+                              type: string
+                            namespace:
+                              type: string
+                            version:
+                              type: string
+                          type: object
+                        type: array
+                      sources:
+                        items:
+                          type: string
+                        type: array
+                      use_sourcer:
+                        type: boolean
+                    type: object
+                type: object
+              meta:
+                properties:
+                  auto_brightness:
+                    type: boolean
+                  capacity:
+                    type: number
+                  modeConfig:
+                    additionalProperties:
+                      properties:
+                        brightness:
+                          type: number
+                        power:
+                          type: string
+                      type: object
+                    type: object
+                  report_interval:
+                    type: number
+                  report_overcrowding:
+                    type: boolean
+                type: object
+              mount:
+                properties:
+                  deid.demo.digi.dev/v1/lamps:
+                    additionalProperties:
+                      properties:
+                        generation:
+                          type: number
+                        mode:
+                          type: string
+                        spec:
+                          properties:
+                            control:
+                              properties:
+                                brightness:
+                                  properties:
+                                    intent:
+                                      type: number
+                                    status:
+                                      type: number
+                                  type: object
+                                power:
+                                  properties:
+                                    intent:
+                                      type: string
+                                    status:
+                                      type: string
+                                  type: object
+                              type: object
+                            egress:
+                              properties:
+                                data:
+                                  properties:
+                                    driver_managed:
+                                      type: boolean
+                                    eoio:
+                                      type: boolean
+                                    flow:
+                                      type: string
+                                    pause:
+                                      type: boolean
+                                  type: object
+                                energy:
+                                  properties:
+                                    driver_managed:
+                                      type: boolean
+                                    eoio:
+                                      type: boolean
+                                    flow:
+                                      type: string
+                                    pause:
+                                      type: boolean
+                                  type: object
+                              type: object
+                            meta:
+                              properties:
+                                auto_brightness:
+                                  type: boolean
+                                report_interval:
+                                  type: number
+                                wattage:
+                                  type: number
+                              type: object
+                            mount:
+                              properties:
+                                mock.digi.dev/v1/lamps:
+                                  additionalProperties:
+                                    properties:
+                                      generation:
+                                        type: number
+                                      mode:
+                                        type: string
+                                      spec:
+                                        properties:
+                                          control:
+                                            properties:
+                                              brightness:
+                                                properties:
+                                                  intent:
+                                                    type: number
+                                                  status:
+                                                    type: number
+                                                type: object
+                                              power:
+                                                properties:
+                                                  intent:
+                                                    type: string
+                                                  status:
+                                                    type: string
+                                                type: object
+                                            type: object
+                                          meta:
+                                            properties:
+                                              actuation_delay:
+                                                type: number
+                                              gen_interval:
+                                                type: number
+                                              managed:
+                                                type: boolean
+                                              wattage:
+                                                type: number
+                                            type: object
+                                        type: object
+                                      status:
+                                        type: string
+                                    type: object
+                                  type: object
+                              type: object
+                          type: object
+                        status:
+                          type: string
+                      type: object
+                    type: object
+                type: object
+              obs:
+                properties:
+                  human_presence:
+                    type: boolean
+                  objects:
+                    items:
+                      properties:
+                        class:
+                          type: string
+                        location:
+                          properties:
+                            h:
+                              type: number
+                            w:
+                              type: number
+                            x1:
+                              type: number
+                            x2:
+                              type: number
+                          type: object
+                        name:
+                          type: string
+                      type: object
+                    type: array
+                  reason:
+                    type: string
+                type: object
+              reflex:
+                additionalProperties:
+                  properties:
+                    policy:
+                      type: string
+                    priority:
+                      type: number
+                    processor:
+                      type: string
+                  type: object
+                type: object
+            type: object
+        type: object
+    served: true
+    storage: true
